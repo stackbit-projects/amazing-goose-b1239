@@ -1,0 +1,7 @@
+{{ $actions := .actions }}
+{{ range $action := $actions }}
+<a href="{{ $action.url | relURL }}"
+  {{ if $action.new_window }} target="_blank"{{ end }}
+  {{ if or $action.new_window $action.no_follow }} rel="{{ if $action.new_window }}noopener {{ end }}{{ if $action.no_follow }}nofollow{{ end }}"{{ end }}
+  {{ if eq $action.style "button" }}class="button"{{ end }}>{{ $action.label }}</a>
+{{ end }}
