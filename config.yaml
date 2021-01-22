@@ -22,7 +22,7 @@ params:
         style: link
       - label: About
         url: /about/
-        style: link
+        style: icon
       - label: Contact
         url: /contact/
         style: link
